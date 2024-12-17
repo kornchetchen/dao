@@ -12,11 +12,17 @@ export default {
   ],
   theme: {
   	extend: {
+		spacing: {
+			'25.5': '25.5px',
+		},
   		colors: {
+			Primary:'#000E54',
+			PrimarySurface: '#16191A',
+			Secondary:'#6895DD',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
-  			blackblack: '#0C0D15',
-  			whitewhite: '#B7B7B8',
+  			black: '#000000',
+  			white: '#FFFFFF',
   			blueblue: '#146EF547',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
