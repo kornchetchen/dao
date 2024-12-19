@@ -1,25 +1,27 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
-    darkMode: ["class"],
-    content: [
+  darkMode: ["class"],
+  content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/views/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/navbar.js"
+    "./node_modules/@nextui-org/theme/dist/components/navbar.js",
   ],
   theme: {
   	extend: {
-  		spacing: {
+  		space: {
 			'24px': '24px',
-  			'25.5px': '25.5px',
-			'35px' : '35px',
-			'57px': '57px',
-
-			'500px': '500px',
-			'335.02px': '335.02px',
+  			'5px': '5px'
+  		},
+  		spacing: {
+  			'24': '24px',
+  			'25.5': '25.5px',
+  			'35': '35px',
+  			'57': '57px',
+  			'500px': '500px',
+  			'335.02px': '335.02px'
   		},
   		fontFamily: {},
   		colors: {
@@ -100,7 +102,7 @@ export default {
   				accent: 'hsl(var(--sidebar-accent))',
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
-  				ring: 'hsl(var(--sidebar-ring))'
+  				ring: 'hsl(var(--sidebar-ring))',
   			}
   		},
   		borderRadius: {
