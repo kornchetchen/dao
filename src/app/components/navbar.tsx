@@ -10,8 +10,7 @@ const Navbar = () => {
   // const MobileNav({open ,setOpen })
 
   return (
-    //
-    <nav className=" h-[70] bg-[#0C0D15] flex justify-between items-center text-white px-6 pl-[60] object-top">
+    <nav className=" h-[70] bg-[#0C0D15] flex justify-between items-center text-white px-6 pl-[60] object-top border-b-[1px] border-[#1c2424]">
       <div className="flex justify-center ">
         <Link href="/">
           <Image
@@ -21,14 +20,15 @@ const Navbar = () => {
             alt="Logo"
           />
         </Link>
-        <div className="flex items-center space-x-4 mx-[90] ">
-          <Link href="/" className="text-[14px]">
+        <div className="flex justify-center  mx-[90] ">
+          <Link href="/" className="text-[14px] text-[#FFFFFF]">
             Launchpad{" "}
           </Link>
-          {/* w-[78] h-[24]  */}
-          <Link href="/" className="text-[10px]  bg-[#146EF547] ">
-            Comming soon{" "}
-          </Link>
+          <div className="ml-3px">
+            <div className="flex justify-center items-center text-10px text-[#146EF5] rounded-full  bg-[#146EF547]  w-[78px] h-[24px]   ">
+              Comming soon
+            </div>
+          </div>
         </div>
       </div>
 

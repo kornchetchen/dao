@@ -6,6 +6,7 @@ import Navbar from "./components/navbar";
 import { FooterDown } from "./components/FooterDown";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { Sidebars } from "./components/Sidebars";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,12 +33,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {" "}
         <Navbar />
-        <SidebarProvider>
-          <Sidebars />
-          {children}
-        </SidebarProvider>
+        <div className="flex min-h-screen">
+          {" "}
+          <SidebarProvider>
+            <Sidebars />
+            <main className="flex-1">{children}</main>
+          </SidebarProvider>
+        </div>
         <FooterDown />
       </body>
     </html>
