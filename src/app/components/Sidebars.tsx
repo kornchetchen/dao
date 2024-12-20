@@ -1,51 +1,28 @@
-import {
-  Calendar,
-  ChevronDown,
-  ChevronUp,
-  Home,
-  Inbox,
-  Settings,
-  UserPen,
-  Vote,
-} from "lucide-react";
+import { ChevronUp, Home, Vote } from "lucide-react";
 
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/components/ui/sidebar";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+import { SidebarMenuButton } from "@/components/ui/sidebar";
+
+import Link from "next/link";
 
 // Menu items.
 const items = [
   {
     title: "Dashboard",
-    url: "/",
-    icon: Home,
-    ChevronUp: <ChevronUp />,
+    url: "/dashbord",
+    icon: Home, ChevronUp
+    // ChevronUp: <ChevronUp />,
   },
   {
     title: "Profile",
-    url: "/",
-    icon: UserPen,
+    url: "/profile",
   },
   {
     title: "Settings",
-    url: "/",
-    icon: Settings,
+    url: "/settings",
   },
   {
     title: "DAO Voting",
-    url: "/",
+    url: "/daovoting",
     icon: Vote,
   },
 ];
@@ -55,14 +32,15 @@ export function Sidebars() {
     <div className=" h-screen bg-[#0C0D15]   w-[300] object-left  ">
       {items.map((item) => (
         <SidebarMenuButton
+          key={item.title}
           asChild
           className=" flex justify-center items-center h-[64] bg-#0C0D15 text-[#ABAFB4] "
         >
-          <a href={item.url}>
-            <item.icon />
+          <Link href={item.url}>
+          {item.icon && <item.icon />}
 
             <span>{item.title}</span>
-          </a>
+          </Link>
         </SidebarMenuButton>
       ))}
     </div>

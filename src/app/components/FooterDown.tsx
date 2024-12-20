@@ -2,14 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 export function FooterDown() {
   return (
-    // 300.02 bg-[#000000]
-    // 1140 241
-    //w-[1140] h-[241]
-    //
-    <footer className="bg-[#000000] pr-[60]   pl-[335.02px] ">
+    <footer className="bg-[#000000] pr-[60]   pl-[335.02px] border-t-[1px]  border-[#333333] bg-gradient-to-r ">
       {/* <div
-        className="w-full h-px max-w-6xl mx-auto my-1 
-          bg-gradient-to-r from-transparent  via-[#333333] to-transparent"
+        className="w-full h-px x-auto my-1 
+        bg-gradient-to-r from-transparent  via-[#333333] to-transparent"
       ></div> */}
 
       <div className="pl-35 pt-[57px]">
