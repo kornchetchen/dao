@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Dropdown from "./ProfileDropdown";
 import NotificationDropdown from "./NotificationDropdown";
-import Portfolio from "./Portfolio";
 import Image from "next/image";
 
 const Navbar = () => {
@@ -33,8 +32,15 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center  mx-[60] space-x-35">
+        {/* <Portfolio /> */}
+
         <Link href="/">
-          <Portfolio />
+          <Image
+            src="/Deposit.png"
+            width={122}
+            height={40}
+            alt="Logo"
+          />
         </Link>
         <NotificationDropdown />
         <Dropdown />
